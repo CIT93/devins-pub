@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: linear-gradient(to bottom right, green, lime);
+    color: gold;
+
+    height: 100vh;
+}
+
+h1 {
+    color: orange;
+
+    transition: 200ms;
+}
+
+h1:hover {
+    font-size: 50px;
+}
+
+p {
+    line-height: 1.6;
+
+    transition: 200ms;
+}
+
+p:hover {
+    font-size: 30px;
+}
