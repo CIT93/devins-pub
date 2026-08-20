@@ -4,25 +4,25 @@ console.log('Hello from app.js! Your JavaScript is connected and running!');
 // We store these references in 'const' variables because the elements themselves won't change.
 const totalDisplayElement = document.getElementById("total-display");
 const addItemButton = document.getElementById("add-item-btn");
+const itemPrice = 15;
 
 // These variables will change as the user interacts with the page.
-let userName = "Devin";
-let clickCount = 0;
+let totalCost = 0;
 
 // --- Part 2: Define and call handleButtonClick Function ---
 // A function is a block of code designed to perform a particular task.
 
 const handleButtonClick = function() {
-    // clickCount = clickCount + 1;
-    // Increase clickCount by 1 each time the button is clicked
-    clickCount += 1;
+    // totalCost = totalCost + 1;
+    // Increase totalCost by 1 each time the button is clicked
+    totalCost += 1;
 
     // Template strings (literal) to easy combine our variables and text into one message
-    let message = `Hello, ${userName}! You have clicked the button ${clickCount} time(s).`;
+    let message = `Hello! You have clicked the button ${totalCost} time(s).`;
     
     // This is basic decision-making in JavaScript!
-    // Use a simple 'if' statement to make our page react differently based on clickCount.
-    if(clickCount >= 5) {
+    // Use a simple 'if' statement to make our page react differently based on totalCost.
+    if(totalCost >= 5) {
         // We can even change the style of an HTML element directly with JavaScript!
         // Change text color
         message += " WOW, you are a super clicker!";
@@ -48,5 +48,5 @@ document.addEventListener("DOMContentLoaded", function() {
     // When 'addItemButton' receives a 'click' event, the 'handleButtonClick' function will execute.
     addItemButton.addEventListener("click", handleButtonClick);
 
-    totalDisplayElement.textContent = `Welcome, ${userName}! Click the button below to start counting`
+    totalDisplayElement.textContent = `Welcome! Click the button below to start counting`
 });
