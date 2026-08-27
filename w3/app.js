@@ -9,10 +9,9 @@ const handleOrderSubmit = function(event) {
     event.preventDefault();
     const orderData = orderHandler.getOrderInputs();
 
+    orderSummary.textContent = `Ordered ${orderData.qty} ${orderData.size} T-Shirts`;
     if(orderData.isGiftWrap === true) {
-        orderSummary.textContent = `Ordered ${orderData.tShirtQuantity} ${orderData.sizeType} T-Shirts gift wrapped`;
-    } else {
-        orderSummary.textContent = `Ordered ${orderData.tShirtQuantity} ${orderData.sizeType} T-Shirts`;
+        orderSummary.textContent += ' - gift wrapped'
     }
 };
 

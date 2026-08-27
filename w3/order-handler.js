@@ -13,8 +13,8 @@ const getSizeRadiosValue = function(sizeSelected) {
 
 export const getOrderInputs = function() {
     return {
-        tShirtQuantity: parseInt(quantityInput.value) || 1,
-        sizeType: getSizeRadiosValue(sizeTypeRadios),
+        qty: parseInt(quantityInput.value) || 1,
+        size: getSizeRadiosValue(sizeTypeRadios),
         isGiftWrap: isGiftWrapInput.checked
     };
 };
