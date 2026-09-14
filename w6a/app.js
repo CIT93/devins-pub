@@ -2,7 +2,7 @@ console.log('Hello from app.js! Your JavaScript is connected and running!');
 
 import * as orderHandler from "./order-handler.js";
 import * as priceCalculator from "./price-calculator.js";
-import * as resultDisplay from "./results-display.js";
+import * as resultsDisplay from "./results-display.js";
 
 const orderForm = document.getElementById('order-form');
 const orderSummary = document.getElementById('order-summary');
@@ -21,7 +21,7 @@ const handleOrderSubmit = function(event) {
     orders.push(newOrder);
     console.log(orders);
 
-    resultDisplay.displayResults(newOrder);
+    resultsDisplay.displayOrder(newOrder);
 
     // orderSummary.textContent = `Ordered ${orderData.qty} ${orderData.size} T-Shirts`;
     // if(orderData.isGiftWrap === true) {

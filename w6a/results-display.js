@@ -4,7 +4,7 @@ const qtyDisplay = resultsContainer.querySelector('#display-qty');
 const sizeDisplay = resultsContainer.querySelector('#display-size');
 const giftDisplay = resultsContainer.querySelector('#display-gift');
 
-export const displayResults = function(newOrder) {
+export const displayOrder = function(newOrder) {
     totalDisplay.textContent = `${newOrder.totalPrice.toFixed(1)}`;
     qtyDisplay.textContent = `${newOrder.qty}`;
     sizeDisplay.textContent = `${newOrder.size}`;
