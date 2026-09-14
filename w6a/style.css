@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: linear-gradient(to bottom right, green, lime);
+    color: gold;
+
+    height: 100vh;
+}
+
+h1 {
+    color: orange;
+
+    transition: 200ms;
+}
+
+h1:hover {
+    font-size: 50px;
+}
+
+p {
+    line-height: 1.6;
+
+    transition: 200ms;
+}
+
+p:hover {
+    font-size: 30px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto; /* Center the content */
+    padding: 15px;
+    background-color: #FFF;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
