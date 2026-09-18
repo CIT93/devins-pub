@@ -1,17 +1,17 @@
-const resultsContainer = document.getElementById('order-summary');
-const totalDisplay = resultsContainer.querySelector('#display-total');
-const qtyDisplay = resultsContainer.querySelector('#display-qty');
-const sizeDisplay = resultsContainer.querySelector('#display-size');
-const giftDisplay = resultsContainer.querySelector('#display-gift');
+// const resultsContainer = document.getElementById('order-summary');
+// const totalDisplay = resultsContainer.querySelector('#display-total');
+// const qtyDisplay = resultsContainer.querySelector('#display-qty');
+// const sizeDisplay = resultsContainer.querySelector('#display-size');
+// const giftDisplay = resultsContainer.querySelector('#display-gift');
 
-export const displayOrder = function(newOrder) {
-    totalDisplay.textContent = `${newOrder.totalPrice.toFixed(1)}`;
-    qtyDisplay.textContent = `${newOrder.qty}`;
-    sizeDisplay.textContent = `${newOrder.size}`;
+// export const displayOrder = function(newOrder) {
+//     totalDisplay.textContent = `${newOrder.totalPrice.toFixed(1)}`;
+//     qtyDisplay.textContent = `${newOrder.qty}`;
+//     sizeDisplay.textContent = `${newOrder.size}`;
 
-    if(newOrder.isGiftWrap) {
-        giftDisplay.textContent = "Yes";
-    } else {giftDisplay.textContent = "No";}
+//     if(newOrder.isGiftWrap) {
+//         giftDisplay.textContent = "Yes";
+//     } else {giftDisplay.textContent = "No";}
 
-    resultsContainer.style.display = 'block';
-};
+//     resultsContainer.style.display = 'block';
+// };

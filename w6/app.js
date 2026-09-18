@@ -25,7 +25,7 @@ const handleOrderSubmit = function(event) {
 
     orderStorage.saveOrders(orders);
     orderList.renderOrders(orders);
-    resultsDisplay.displayOrder(newOrder);
+    // resultsDisplay.displayOrder(newOrder);
 
     // orderSummary.textContent = `Ordered ${orderData.qty} ${orderData.size} T-Shirts`;
     // if(orderData.isGiftWrap === true) {

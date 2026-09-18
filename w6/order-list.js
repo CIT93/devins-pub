@@ -4,6 +4,7 @@ const createTableRow = function(order) {
     const row = document.createElement('tr');
 
     row.innerHTML = `
+    <td></td>
     <td>${order.qty}</td>
     <td>${order.size}</td>
     <td>${order.totalPrice}</td>
@@ -13,7 +14,7 @@ const createTableRow = function(order) {
 }
 
 export const renderOrders = function(orders) {
-    orderTableBody = '';
+    orderTableBody.innerHTML = '';
 
     for(const order of orders) {
         const rowElement = createTableRow(order);
