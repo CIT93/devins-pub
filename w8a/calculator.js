@@ -85,5 +85,5 @@ export const calculateFootprint = function(data) {
         homeSizeFootprint: homeSizePoints,
         dietTypeFootprint: dietTypePoints,
         foodPackagingFootprint: foodPackagingPoints
-    };
+    ;
 };
