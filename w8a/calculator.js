@@ -24,10 +24,10 @@ const calculateHouseholdPoints = function(householdMembers) {
 
 const calculateHomeSizePoints = function(homeSquareFootage, isApartment) {
     if(isApartment) return 2;
-    else if(homeSquareFootage > 2000) return 10;
+    else if(homeSquareFootage < 2000) return 10; 
     else if(homeSquareFootage >= 1000) return 7;
     else if(homeSquareFootage > 0) return 4;
-    return 0; // Default or invalid input
+    return 0; 
 };
 
 // Calculates points for Food Diet Type based on WikiHow Method 1.

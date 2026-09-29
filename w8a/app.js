@@ -61,7 +61,7 @@ const handleFormSubmit = function(event) {
     event.preventDefault();
     console.log(event);
     
-    const formData = formHandler.getFormInput();
+    const formData = formHandler.getFormInputs();
     
     console.log('Form Inputs - Object Literal:');
 
