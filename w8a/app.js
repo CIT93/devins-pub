@@ -60,16 +60,11 @@ const resetAllUIStates = function() {
 const handleFormSubmit = function(event) {
     event.preventDefault();
     console.log(event);
-    // Refactor variable name to be formData which is the returned object literal
-    const formData = formHandler.getFormInputs();
-    // Refactor console for object literal
+    
+    const formData = formHandler.getFormInput();
+    
     console.log('Form Inputs - Object Literal:');
-    console.log(`key of householdMember value of ${formData.householdMembers}`);
-    console.log(`key of homeSquareFootage value of ${formData.homeSquareFootage}`);
-    console.log(`key of isApartment value of ${formData.isApartment}`);
-    console.log(`key of dietType value of ${formData.dietType}`);
-    console.log(`key of foodPackaging value of ${formData.foodPackaging}`);
-    console.log(formData);
+
     const calculatedResults = calculator.calculateFootprint(formData);
 
     // Combine the input data with the calculated results into a single entry object.
