@@ -25,7 +25,10 @@ const handleOrderSubmit = function(event) {
     console.log(orders);
 
     orderStorage.saveOrders(orders);
-    orderList.renderOrders(orders);
+    orderList.renderOrders(orders, {
+        onDelete: handleDelete,
+        onEdit: handleEdit
+    });
     // resultsDisplay.displayOrder(newOrder);
 
     // orderSummary.textContent = `Ordered ${orderData.qty} ${orderData.size} T-Shirts`;
@@ -34,12 +37,23 @@ const handleOrderSubmit = function(event) {
     // }
 };
 
+const handleDelete = function(id) {
+    console.log("App.js: Requesting delete for order", id);
+};
+
+const handleEdit = function(id) {
+    console.log("App.js: Requesting edit for order", id);
+};
+
 const init = function() {
     orderForm.addEventListener('submit', handleOrderSubmit);
     const loadedOrders = orderStorage.loadOrders();
     if(loadedOrders.length > 0) {
         orders.push(...loadedOrders);
-        orderList.renderOrders(orders);
+        orderList.renderOrders(orders, {
+            onDelete: handleDelete,
+            onEdit: handleEdit
+        });
     } else {
         console.log("No orders found, starting fresh.");
     }

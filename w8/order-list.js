@@ -1,3 +1,5 @@
+let moduleCallbacks = {};
+
 const orderTableBody = document.getElementById('order-table-body');
 
 const createTableRow = function(order) {
@@ -30,11 +32,18 @@ tableBody.addEventListener('click', function(event) {
     if (!id) return;
 
     // 3. Temporary Test: Log the ID to prove it works!
-    console.log("Clicked button with ID:", id); 
+    // console.log("Clicked button with ID:", id); 
+    if (target.classList.contains('edit-btn') && typeof moduleCallbacks.onEdit === 'function') {
+        moduleCallbacks.onEdit(id);
+    }
+    if (target.classList.contains('delete-btn') && typeof moduleCallbacks.onDelete === 'function') {
+        moduleCallbacks.onDelete(id);
+    }
 });
 
-export const renderOrders = function(orders) {
+export const renderOrders = function(orders, callbacks) {
     orderTableBody.innerHTML = '';
+    moduleCallbacks = callbacks;
 
     for(const order of orders) {
         const rowElement = createTableRow(order);
